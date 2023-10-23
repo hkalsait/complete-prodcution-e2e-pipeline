@@ -14,4 +14,13 @@ pipeline {
                 }
             }
         }
+
+        stages {
+            stage("Checkout from SCM") {
+                steps {
+                    echo "Cleaning our workspace..."
+                    git branch: "main", credentialsId: "github", url: "https://github.com/hkalsait/complete-production-e2e-pipeline"
+                }
+            }
+        }
 }
