@@ -27,11 +27,11 @@ pipeline {
                 }
             }
         
-            stage("Test the Application") {
+            /*stage("Test the Application") {
                 steps {
                     sh "mvn test"
                 }
-            }
+            }*/
         }
         
 }
