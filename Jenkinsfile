@@ -23,20 +23,16 @@ pipeline {
                 }
             }
         }
-
-        stages {
             stage("Build Application") {
                 steps {
                     sh "mvn clean package"
                 }
             }
-        }
-
-        stages {
+        
             stage("Checkout from SCM") {
                 steps {
                     sh "mnv test"
                 }
             }
-        }
+        
 }
