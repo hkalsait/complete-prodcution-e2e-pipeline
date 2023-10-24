@@ -27,7 +27,7 @@ pipeline {
                 }
             }
         
-            stage("Checkout from SCM") {
+            stage("Test the Application") {
                 steps {
                     sh "mnv test"
                 }
