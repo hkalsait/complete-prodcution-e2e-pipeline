@@ -21,17 +21,18 @@ pipeline {
                 }
             }
 
-            stage("Build Application") {
+            /*stage("Build Application") {
                 steps {
                     sh "mvn clean package"
                 }
             }
         
-            /*stage("Test the Application") {
+        stage("Test the Application") {
                 steps {
                     sh "mvn test"
                 }
             }*/
+
         }
         
 }
