@@ -13,16 +13,14 @@ pipeline {
                     cleanWs()
                 }
             }
-        }
 
-        stages {
             stage("Checkout from SCM") {
                 steps {
                     echo "Cleaning our workspace..."
                     git branch: "main", credentialsId: "github", url: "https://github.com/hkalsait/complete-production-e2e-pipeline"
                 }
             }
-        }
+
             stage("Build Application") {
                 steps {
                     sh "mvn clean package"
@@ -34,5 +32,6 @@ pipeline {
                     sh "mnv test"
                 }
             }
+        }
         
 }
